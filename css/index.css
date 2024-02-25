@@ -44,6 +44,10 @@ img, svg, video {
     object-fit: cover;
 }
 
+html, body {
+    height: 100%;
+}
+
 /* Reset and base styles END */
 
 /* container */
@@ -51,6 +55,7 @@ img, svg, video {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 /* wrapper */
@@ -59,6 +64,11 @@ img, svg, video {
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 20px;
+
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
 }
 
 /* header */
@@ -93,46 +103,84 @@ img, svg, video {
 /* main */
 
 .main {
-    padding-top: 20px;
+    flex-grow: 1;
 }
 
 /* footer */
 
 .footer {
+    min-height: 545px;
+    padding-bottom: 30px;
+
+    font-size: 12px;
+
     background-color: #151515;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    text-align: center;
-
-    color: #ffffff;
+    color: #fff;
 }
 
 .footer_inner {
-    margin-top: 50px;
-    margin-bottom: 32px;
-
-    min-height: 545px;
+    max-width: 100%;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .footer_menu {
     display: flex;
     flex-direction: row;
-    align-items: start;
     justify-content: space-evenly;
+    align-items: start;
 
-    text-align: left;
-
-    max-width: 100%;
+    margin: 50px 0;
 }
 
 .footer_menu-inner {
-    color: #978a7a;
+    padding-bottom: 20px;
+}
+
+.footer_menu-inner:last-child , .footer_menu-inner:first-child {
+    padding-bottom: 0;
+}
+
+.footer_menu-p {
+    margin-bottom: 40px;
+    font-size: 26px;
+}
+
+.footer_menu-link {
+    font-size: 16px;
+}
+
+.footer_logos {
+    max-width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 39px;
+}
+
+.footer_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 52px;
+    margin-bottom: 30px;
+}
+
+.footer_info-text {
+    max-width: 800px;
+
+    text-align: center;
+}
+
+.footer_nav {
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
